@@ -3,95 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car Selling Website</title>
+    <title>project 4</title>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+<h1> Car World</h1>
+<h2> The best Place to Find The Ride that Suits You!</h2>
 
-    <header>
-        <h1>Car World</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#listings">Listings</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section id="home">
-        <div class="hero">
-            <h2>Welcome to Car World</h2>
-            <p>Find the perfect car for you.</p>
-            <h2>Featured Listings</h2>
-        </div>
-    </section>
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#warranty">Warranty</a></li>
+        <li><a href="#find-dealership">Find a Dealership</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-    <section id="listings">
+    <div class="category-container">
+        <label for="car-category">Select Car Category:</label>
+        <select id="car-category">
+            <option value="new">New Cars</option>
+            <option value="old">Old Cars</option>
+        </select>
+    </div>
 
-        <div class="car-listing" id="car-listing-1">
-            <img src="images/clunker .jpeg" alt="Car 1">
-            <h3>buggy Model</h3>
-            <p>Price: $400</p>
-            <a href="#" class="btn">View Details</a>
-        </div>
+    <div class="car-container">
+        <img id="car-image" src="" alt="Car">
+        <h2 id="car-title">Car Model</h2>
+        <p id="car-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget dolor nisl.</p>
+    </div>
 
-        <div class="car-listing" id="car-listing-2">
-            <img src="images/old car 2.jpeg" alt="Car 1">
-            <h3>buggy Model</h3>
-            <p>Price: $400</p>
-            <a href="#" class="btn">View Details</a>
-        </div>
+    <div class="navigation">
+        <button id="back-btn">Back</button>
+        <button id="next-btn">Next</button>
+    </div>
+    <h2> Dont like What You see? </h2>
+    <div id="map"></div>
+    <div class="search-container">
+        <label for="map-search">Search for a location:</label>
+        <input type="text" id="map-search" placeholder="Enter location...">
+    </div>
+    
 
-        <div class="car-listing" id="car-listing-3">
-            <img src="images/old car 3.jpeg" alt="Car 1">
-            <h3>buggy Model</h3>
-            <p>Price: $400</p>
-            <a href="#" class="btn">View Details</a>
-        </div>
-
-        <div class="car-listing" id="car-listing-4">
-            <img src="images/car 5.jpeg" alt="Car 1">
-            <h3>buggy Model</h3>
-            <p>Price: $400</p>
-            <a href="#" class="btn">View Details</a>
-        </div>
-
-        <div class="car-listing" id="car-listing-5">
-            <img src="images/car 6.jpeg" alt="Car 1">
-            <h3>buggy Model</h3>
-            <p>Price: $400</p>
-            <a href="#" class="btn">View Details</a>
-        </div>
-
-        <div class="car-listing" id="car-listing-6">
-            <img src="images/old car 5.jpeg" alt="Car 1">
-            <h3>buggy Model</h3>
-            <p>Price: $400</p>
-            <a href="#" class="btn">View Details</a>
-        </div>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <p>Have a question or want to list your car? Contact us!</p>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-
-            <button type="submit" class="btn">Submit</button>
-        </form>
-    </section>
-
+    <h1> Find A Dealership Near You </h1>
+    <script defer src="script.js"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsL4iOX-zV6ZKgjPuhi4JJ5mLxUPORHQg&libraries=places&callback=initMap"></script>
+    
     <footer>
         <p>&copy; 2023 Car World. All rights reserved.</p>
     </footer>
-
 </body>
 </html>
